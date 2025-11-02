@@ -5,7 +5,6 @@ import {
   Package, 
   Truck, 
   BarChart3, 
-  Settings,
   Sprout
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -17,11 +16,10 @@ interface SidebarProps {
 
 const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", path: "/" },
-  { icon: Users, label: "Farmers", path: "/farmers" },
+  { icon: Users, label: "Kebeles", path: "/kebeles" },
   { icon: Package, label: "Inventory", path: "/inventory" },
   { icon: Truck, label: "Distribution", path: "/distribution" },
   { icon: BarChart3, label: "Reports", path: "/reports" },
-  { icon: Settings, label: "Settings", path: "/settings" },
 ];
 
 export const Sidebar = ({ collapsed }: SidebarProps) => {
