@@ -7,6 +7,7 @@ import { Layout } from "@/components/Layout";
 import Dashboard from "./pages/Dashboard";
 import Kebeles from "./pages/Kebeles";
 import KebeleManagement from "./pages/KebeleManagement";
+import KebeleDetail from "./pages/KebeleDetail";
 import Distribution from "./pages/Distribution";
 import Inventory from "./pages/Inventory";
 import BatchDetail from "./pages/BatchDetail";
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/" element={<Dashboard />} />
             <Route path="/kebeles" element={<Kebeles />} />
             <Route path="/kebeles/management" element={<KebeleManagement />} />
+            <Route path="/kebeles/:id" element={<KebeleDetail />} />
             <Route path="/distribution" element={<Distribution />} />
             <Route path="/inventory" element={<Inventory />} />
             <Route path="/inventory/:batchId" element={<BatchDetail />} />

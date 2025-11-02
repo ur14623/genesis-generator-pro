@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Eye, Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,6 +15,7 @@ import {
 } from "@/components/ui/table";
 
 const KebeleManagement = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
 
   const kebeles = [
@@ -90,7 +92,11 @@ const KebeleManagement = () => {
                   <TableCell>{kebele.farmers}</TableCell>
                   <TableCell>{getStatusBadge(kebele.status)}</TableCell>
                   <TableCell className="text-right">
-                    <Button variant="outline" size="sm">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => navigate(`/kebeles/${kebele.id}`)}
+                    >
                       Manage
                     </Button>
                   </TableCell>
